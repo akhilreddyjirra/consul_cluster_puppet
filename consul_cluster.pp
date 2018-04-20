@@ -14,7 +14,7 @@ node 'puppet-agent-3' {
 #  home    => '/home/consul',
 #  password  => 'consul',
 #}
-
+## Install Consul in agent-3
 class { '::consul_srv':
   config_hash => {
     'bootstrap_expect' => 3,
@@ -33,7 +33,7 @@ class { '::consul_srv':
 
 }
 
-# Install agent in other Nodes
+# Install agent in other Nodes (agent-1 and adgent-2)
 
 
 node 'puppet-agent-2', 'puppet-agent-1' {
